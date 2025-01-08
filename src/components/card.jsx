@@ -1,13 +1,14 @@
-const Card = () => {
+const Card = (props) => {
   return (
-    <>
-      <h1 className="text-xl text-[#000000] ">Pizza</h1>
-      <img src="piz.jpg" alt="pizza" className="h-4 " />
-      <p className="text-sm">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci,
-        totam. Laborum a fugiat deleniti itaque?
-      </p>
-    </>
+    <div className="flex items-center justify-center  ">
+      <div className="container mx-auto p-4">
+        <h1 className="text-xl text-orange-500 hover:bg-yellow-500">
+          {props.title}
+        </h1>
+        <img src={props.img} alt="mango" className="h-10" />
+        <p className="text-xs">{props.desc} </p>
+      </div>
+    </div>
   );
 };
 
